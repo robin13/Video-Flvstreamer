@@ -7,15 +7,15 @@ use IPC::Run qw/run timeout/;
 
 =head1 NAME
 
-Video::Flvstreamer - The great new Video::Flvstreamer!
+Video::Flvstreamer - An OO interface to flvstreamer
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
@@ -206,10 +206,13 @@ You can find documentation for this module with the perldoc command.
 
     perldoc Video::Flvstreamer
 
-
 You can also look for information at:
 
 =over 4
+
+=item * Repository on Github
+
+L<https://github.com/robin13/Video-Flvstreamer>
 
 =item * RT: CPAN's request tracker
 
@@ -232,6 +235,7 @@ L<http://search.cpan.org/dist/Video-Flvstreamer/>
 
 =head1 ACKNOWLEDGEMENTS
 
+L<http://savannah.nongnu.org/projects/flvstreamer>
 
 =head1 LICENSE AND COPYRIGHT
 
