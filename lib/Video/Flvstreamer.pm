@@ -139,7 +139,7 @@ sub get_raw{
         $try++;
     }
     if( ! $finished ){
-        die( "I tried $tries times, but couldn't complete download.\nCommand: " . 
+        die( "I tried $try times, but couldn't complete download.\nCommand: " . 
              join( ' ', @cmd ) .
              "\nLast Return code: $?\n" .
            "Last StdErr: $err\n" .
