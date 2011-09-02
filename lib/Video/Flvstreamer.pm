@@ -11,11 +11,11 @@ Video::Flvstreamer - An OO interface to flvstreamer
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 
 =head1 SYNOPSIS
@@ -139,11 +139,19 @@ sub get_raw{
         $try++;
     }
     if( ! $finished ){
-        die( "I tried $try times, but couldn't complete download.\nCommand: " . 
-             join( ' ', @cmd ) .
-             "\nLast Return code: $?\n" .
-           "Last StdErr: $err\n" .
-           "Last StdOut: $out\n" );
+        die( 
+            sprintf( "I tried %u times, but couldn't complete download.\n" .
+                "Command: %s\n" . 
+                "Last Return code: %u\n" .
+                "Last StdErr: %s\n" .
+                "Last StdOut: %s\n",
+                $try,
+                join( ' ', @cmd ),
+                $?,
+                $err || '',
+                $out || '',
+                )
+           );
     }
 }
 
